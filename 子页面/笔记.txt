@@ -1,0 +1,15 @@
+元素在滚动条滚动时触发事件
+window.onscroll   对所有浏览器都兼容  
+document.body.onscroll  不支持Safari
+document.documentElement.onscroll
+（页面具有 DTD，或者说指定了DOCTYPE时，使用 document.documentElement
+页面不具有 DTD，或者说没有指定了DOCTYPE，时，使用 document.body）
+
+获取页面滚动条当前的纵向位置
+document.body.scrollTop	恒为0，因为对应的是body标签的位置
+document.documentElement.scrollTop  对应的是html元素，此方法为正确的
+但为了兼容IE需要两者都写上
+
+IE8及以下的浏览器不支持 addListener()方法
+
+Vue.component(,);  第一个参数可自定义 第二个参数一定要和var 创建组件时的名字一致
